@@ -7,7 +7,7 @@ module.exports = {
         filename: (req, file, cb) => {
             const ext = path.extname(file.originalname);
             const name = path.basename(file.originalname, ext);
-
+            //cb = callback
             cb(null, `${name}-${Date.now()}${ext}`);
         },
     }),
