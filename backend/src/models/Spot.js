@@ -17,6 +17,7 @@ const SpotSchema = new mongoose.Schema({
 );
 
 SpotSchema.virtual('thumbnail_url').get(function() {
+    // no Android não aparece a imagem, colocar o IP
     return `http://localhost:3333/files/${this.thumbnail}`
 })
 
